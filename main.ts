@@ -2,12 +2,13 @@ function Helix (brightness: number) {
     turtle.setBrightness(brightness)
     turtle.home()
     turtle.pen(TurtlePenMode.Down)
-    for (let n = 0; n <= 4; n++) {
+    for (let n = 0; n <= 3; n++) {
         for (let index = 0; index < 2; index++) {
             turtle.forward(n + 1)
             turtle.turnRight()
         }
     }
+    turtle.forward(5)
 }
 input.onButtonPressed(Button.A, function () {
     Helix(brightness_high)
